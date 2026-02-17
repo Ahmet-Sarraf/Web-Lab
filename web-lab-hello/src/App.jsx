@@ -8,7 +8,7 @@ function App() {
          < div >
             < h1 > Web Tasarimi ve Programlama </h1 >
             < h2 > LAB - 1</h2 >
-            < p > Ad Soyad: [Ahmet Sarraf]</p >
+            < p > Ad Soyad: [Ahmet Sarraff]</p >
             < p > Ogrenci No: [225541062]</p >
          </div >
          )
