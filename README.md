@@ -1,28 +1,48 @@
-# Web LAB -1 - Hello Project
 
- ## Hakkinda
- Bu proje , Web Tasarimi ve Programlama dersi LAB -1 kapsaminda
- Vite + React + TypeScript kullanilarak olusturulmustur.
+---
 
- ## Gelistirici
- - **Ad Soyad:** [Kendi Adin]
- - **Ogrenci No:** [Numaran]
+## 🎨 Kullanılan CSS Teknikleri
 
- ## Kullanilan Teknolojiler
- - React 18
- - TypeScript
- - Vite
+### 1️⃣ Design Tokens
+Renk, spacing, radius ve shadow değerleri `:root` içerisinde tanımlanmıştır.
 
- ## Kurulum
- ```bash
- npm install
- ```
+### 2️⃣ Flexbox
+Navigasyon menüsünde yatay ve mobilde dikey hizalama için kullanılmıştır.
 
- ## Calistirma
- ```bash
- npm run dev
- ```
- Tarayicida http://localhost:5173 adresini ac.
+### 3️⃣ CSS Grid
+Proje kartlarının responsive şekilde yerleşimi için kullanılmıştır.
 
- ## Ekran Goruntusu
- (ekran goruntusunu buraya ekle)
+### 4️⃣ Media Queries
+3 breakpoint uygulanmıştır:
+
+- Mobil (varsayılan)
+- Tablet (min-width: 640px)
+- Masaüstü (min-width: 1024px)
+
+---
+
+## 📱 Responsive Davranış
+
+- Mobilde menü alt alta görünür.
+- Tablet ve masaüstünde yatay görünür.
+- Masaüstünde proje kartları 3 kolon olarak yerleşir.
+- İçerik geniş ekranlarda ortalanır.
+
+---
+
+
+## 📎 Git Commit Yapısı
+
+Çalışma sürecinde aşağıdaki commit türleri kullanılmıştır:
+
+- feat: CSS tasarım değişkenleri eklendi
+- feat: temel stiller oluşturuldu
+- feat: responsive layout yapısı eklendi
+- feat: kart bileşeni oluşturuldu
+- feat: HTML sayfa yapısı tamamlandı
+
+---
+
+## ✅ Sonuç
+
+Bu LAB çalışmasında responsive tasarım prensipleri ve modern CSS mimarisi uygulanmıştır.
