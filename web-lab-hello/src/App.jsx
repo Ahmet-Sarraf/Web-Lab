@@ -1,72 +1,83 @@
 import "./App.css";
 
 function App() {
+  const handleScroll = (e, id) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (el) {
+      const yStr = el.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: yStr, behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
-      {/* Skip Navigation */}
-      <a href="#main-content" className="skip-link">
-        Ana içeriğe atla
-      </a>
-
       <header>
-        <h1>Ahmet Sarraf</h1>
-
+        <h1>Ahmet Portfolio</h1>
         <nav aria-label="Ana navigasyon">
           <ul>
-            <li><a href="#hakkimda">Hakkımda</a></li>
-            <li><a href="#projeler">Projeler</a></li>
-            <li><a href="#iletisim">İletişim</a></li>
+            <li><a href="#anasayfa" onClick={(e) => handleScroll(e, 'anasayfa')}>Ana Sayfa</a></li>
+            <li><a href="#projeler" onClick={(e) => handleScroll(e, 'projeler')}>Projeler</a></li>
+            <li><a href="#yetenekler" onClick={(e) => handleScroll(e, 'yetenekler')}>Yetenekler</a></li>
+            <li><a href="#iletisim" onClick={(e) => handleScroll(e, 'iletisim')}>İletişim</a></li>
           </ul>
         </nav>
       </header>
 
-      <main id="main-content">
-        {/* HAKKIMDA */}
-        <section id="hakkimda">
-          <h2>Hakkımda</h2>
-
-          <figure>
-            <img
-              src="/assets/profil.jpg"
-              alt="Ahmet Sarraf'ın profil fotoğrafı"
-            />
-            <figcaption>Ahmet Sarraf</figcaption>
-          </figure>
-
-          <p>
-            Yazılım mühendisliği öğrencisiyim.
-          </p>
+      <main>
+        {/* HERO SECTION */}
+        <section id="anasayfa" className="hero">
+          <h2>Merhaba, Ben Ahmet!</h2>
+          <p>Modern web teknolojileri kullanarak estetik, hızı ve kullanıcı deneyimini ön planda tutan arayüzler tasarlıyor, hayallerinizi koda döküyorum.</p>
         </section>
 
         {/* PROJELER */}
         <section id="projeler">
           <h2>Projelerim</h2>
+          <div className="project-grid">
+            <div className="card">
+              <h3>Portföy Sitesi</h3>
+              <p>React, Vite ve modern CSS mimarisi kullanarak geliştirdiğim kişisel web sitem.</p>
+            </div>
+            <div className="card">
+              <h3>E-Ticaret Arayüzü</h3>
+              <p>Kullanıcı deneyimini ön planda tutan, karanlık mod destekli alışveriş platformu prototipi.</p>
+            </div>
+            <div className="card">
+              <h3>Görev Yöneticisi</h3>
+              <p>Günlük işlerinizi organize etmenize yardımcı olan minimal bir To-Do uygulaması.</p>
+            </div>
+          </div>
+        </section>
 
-          <article>
-            <h3>Örnek Proje</h3>
-            <p>Kişisel portföy çalışması.</p>
-          </article>
+        {/* YETENEKLER */}
+        <section id="yetenekler">
+          <h2>Yetenekler</h2>
+          <ul className="skill-tags">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript (ES6+)</li>
+            <li>React</li>
+            <li>Vite</li>
+            <li>Responsive Design</li>
+          </ul>
         </section>
 
         {/* İLETİŞİM */}
         <section id="iletisim">
           <h2>İletişim</h2>
-
           <form noValidate>
             <fieldset>
-              <legend>İletişim Formu</legend>
-
               <div className="form-group">
                 <label htmlFor="name">Ad Soyad</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
+                  placeholder="Ahmet Sarraf"
                   required
                   minLength={2}
-                  aria-describedby="name-error"
                 />
-                <small id="name-error" className="error-msg" role="alert"></small>
               </div>
 
               <div className="form-group">
@@ -75,26 +86,9 @@ function App() {
                   type="email"
                   id="email"
                   name="email"
+                  placeholder="ahmet@example.com"
                   required
-                  aria-describedby="email-error"
                 />
-                <small id="email-error" className="error-msg" role="alert"></small>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="subject">Konu</label>
-                <select
-                  id="subject"
-                  name="subject"
-                  required
-                  aria-describedby="subject-error"
-                >
-                  <option value="">Seçiniz</option>
-                  <option value="is">İş Teklifi</option>
-                  <option value="soru">Soru</option>
-                  <option value="oneri">Öneri</option>
-                </select>
-                <small id="subject-error" className="error-msg" role="alert"></small>
               </div>
 
               <div className="form-group">
@@ -103,11 +97,10 @@ function App() {
                   id="message"
                   name="message"
                   rows={5}
+                  placeholder="Merhabalar, projeniz hakkında konuşmak isterim..."
                   required
                   minLength={10}
-                  aria-describedby="message-error"
                 ></textarea>
-                <small id="message-error" className="error-msg" role="alert"></small>
               </div>
 
               <button type="submit">Gönder</button>
@@ -117,7 +110,7 @@ function App() {
       </main>
 
       <footer>
-        <p>© 2025 Ahmet Sarraf</p>
+        <p>© 2026 Ahmet Portfolio. Tüm Hakları Saklıdır.</p>
       </footer>
     </>
   );
