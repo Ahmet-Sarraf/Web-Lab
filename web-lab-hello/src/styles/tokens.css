@@ -1,4 +1,21 @@
 :root {
+    /* Colors - Modern Light Theme (Default) */
+    --color-bg: #f8fafc;
+    --color-surface: #ffffff;
+    --color-surface-hover: #f1f5f9;
+    --color-primary: #2563eb;
+    --color-primary-glow: rgba(37, 99, 235, 0.5);
+    --color-secondary: #7c3aed;
+    --color-text: #0f172a;
+    --color-text-muted: #64748b;
+    --color-border: #e2e8f0;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    --gradient-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(248, 250, 252, 0.9));
+}
+
+.dark {
     /* Colors - Modern Dark Theme */
     --color-bg: #0f172a;
     --color-surface: #1e293b;
@@ -11,9 +28,10 @@
     --color-border: #334155;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
     --gradient-surface: linear-gradient(180deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.9));
+}
 
+:root {
     /* Typography */
     --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
     --text-sm: 0.875rem;
