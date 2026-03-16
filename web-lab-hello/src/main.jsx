@@ -1,7 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
-// CSS Dosyalarını Doğru React Yöntemiyle İçe Aktarma
+// Tailwind CSS ve Tema Dosyaları
+import './index.css'
 import './styles/tokens.css'
 import './styles/base.css'
 import './styles/layout.css'
